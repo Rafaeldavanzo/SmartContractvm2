@@ -87,7 +87,7 @@ print("Output from greet()")
 print(greeter.functions.greet().call())
 
 nonce = W3.eth.getTransactionCount(address1)
-tx_dict = greeter.functions.setGreeting('Nihao').buildTransaction({
+tx_dict = greeter.functions.setGreeting('Ola').buildTransaction({
   'chainId': 3,
   'gas': 1400000,
   'gasPrice': w3.toWei('40', 'gwei'),
@@ -100,8 +100,8 @@ result = W3.eth.sendRawTransaction(signed_txn.rawTransaction)
 tx_receipt = None#W3.eth.getTransactionReceipt(result)
 
 count = 0
-while tx_receipt is None and (count < 30):
-  time.sleep(20)
+while tx_receipt is None and (count < 100):
+  time.sleep(2)
   try:
     tx_receipt = W3.eth.getTransactionReceipt(result)
   except:

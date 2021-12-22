@@ -41,9 +41,6 @@ address1=account1.address
 Greeter = W3.eth.contract(abi=abi, bytecode=bytecode)
 
 nonce = W3.eth.getTransactionCount(address1)
-#diagnostics
-#print(nonce)
-# Submit the transaction that deploys the contract
 tx_dict = Greeter.constructor().buildTransaction({
   'chainId': 3,
   'gas': 1400000,
@@ -53,13 +50,8 @@ tx_dict = Greeter.constructor().buildTransaction({
 })
 
 signed_txn = W3.eth.account.sign_transaction(tx_dict, private_key=privateKey)
-#diagnostics
-#print(signed_txn)
 print("Deploying the Smart Contract")
 result = W3.eth.sendRawTransaction(signed_txn.rawTransaction)
-#diagnostics
-#print(result)
-#print('-----------------------------------')
 tx_receipt = None#W3.eth.getTransactionReceipt(result)
 
 count = 0
@@ -121,8 +113,6 @@ while tx_receipt is None and (count < 100):
 if tx_receipt is None:
   print (" {'status': 'failed', 'error': 'timeout'} ")
 
-#tx_hash = greeter.functions.setGreeting('Nihao').transact({"from":account1.address})
-#tx_receipt = w3.eth.waitForTransactionReceipt(tx_hash)
 print("Output from greet()")
 print(greeter.functions.greet().call({"from":account1.address}))
 

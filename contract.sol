@@ -15,3 +15,19 @@ contract Greeter {
     return greeting;
   }
 }
+
+contract thecontract{
+  wint256 public peopleCount = 0;
+  mapping(wint => Person) public people;
+  
+  struct Person {
+    wint _id;
+    string -firstname;
+    string _lastName;
+  }
+  
+  functions addPerson(String memory _firstName, string memory _LastName) public {
+    peopleCount += 1;
+    people[peopleCount] = Person(peopleCount, _firstName, -lastName);
+  }
+}

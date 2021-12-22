@@ -86,8 +86,19 @@ greeter = W3.eth.contract(
 print("Output from greet()")
 print(greeter.functions.greet().call())
 
+def my_Authentication():
+  print("I need your full name for authentication porposes")
+  fistName = ""
+  lastName = ""
+  print("Please enter your first name:")
+  fistName = input(" ").lower()
+  print("Please enter your last name:")
+  lastName = input(" ").lower()
+  print("Hi "+ fistName +" "+ lastName + " you are authorised! Thanks")
+
+
 nonce = W3.eth.getTransactionCount(address1)
-tx_dict = greeter.functions.setGreeting('Ola my name is Rafael Garcia student number 10395049').buildTransaction({
+tx_dict = greeter.functions.setGreeting(my_Authentication()).buildTransaction({
   'chainId': 3,
   'gas': 1400000,
   'gasPrice': w3.toWei('40', 'gwei'),

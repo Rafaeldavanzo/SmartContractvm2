@@ -98,7 +98,7 @@ def my_Authentication():
 
 
 nonce = W3.eth.getTransactionCount(address1)
-tx_dict = greeter.functions.setGreeting(my_Authentication()).buildTransaction({
+tx_dict = greeter.functions.setOwnerName(my_Authentication()).buildTransaction({
   'chainId': 3,
   'gas': 1400000,
   'gasPrice': w3.toWei('40', 'gwei'),

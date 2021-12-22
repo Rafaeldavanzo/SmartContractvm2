@@ -7,16 +7,10 @@ stringpublic FullName;
 
 
   function setOwnerName(stringmemory _FullName) public {
-
-  FullName =_FullName;
-
+    FullName =_FullName;
   }
-
 
   function greet() view public returns (stringmemory) {
-
-  return greeting;
-
+    return greeting;
   }
-
 }

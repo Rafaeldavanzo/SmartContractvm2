@@ -6,11 +6,11 @@ string public greeting;
 string public FullName;
 
 
-  function setOwnerName(stringmemory _FullName) public {
+  function setOwnerName(string memory _FullName) public {
     FullName =_FullName;
   }
 
-  function greet() view public returns (stringmemory) {
+  function greet() view public returns (string memory) {
     return greeting;
   }
 }

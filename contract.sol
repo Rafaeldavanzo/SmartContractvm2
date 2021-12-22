@@ -2,8 +2,8 @@ pragma solidity ^0.8.0;
 
 contract Greeter {
 
-stringpublic greeting;
-stringpublic FullName;
+string public greeting;
+string public FullName;
 
 
   function setOwnerName(stringmemory _FullName) public {

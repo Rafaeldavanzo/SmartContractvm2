@@ -78,6 +78,7 @@ greeter = W3.eth.contract(
 print("Output from greet()")
 print(greeter.functions.greet().call())
 
+# the idea of this function is to record the clients name on all transactions.
 def my_Authentication():
   print("Hi Paul, bellow will be the function Ive added to the Code")
   print("I need your full name for authentication porposes")

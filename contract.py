@@ -79,6 +79,7 @@ print("Output from greet()")
 print(greeter.functions.greet().call())
 
 def my_Authentication():
+  print("Hi Paul, bellow will be the function Ive added to the Code")
   print("I need your full name for authentication porposes")
   firstName = ""
   lastName = ""
@@ -96,6 +97,9 @@ tx_dict = greeter.functions.setOwnerName(my_Authentication()).buildTransaction({
   'gasPrice': w3.toWei('40', 'gwei'),
   'nonce': nonce,
   'from':address1
+  
+ 
+  
 })
 
 signed_txn = W3.eth.account.sign_transaction(tx_dict, private_key=privateKey)

@@ -1,14 +1,16 @@
 pragma solidity ^0.8.0;
 
 contract Greeter {
-  string public greeting;
 
-  constructor() public {
-    greeting = 'Hello';
-  }
+constructor() public {
+    OwnerName = '';
+}
+string public greeting;
+string public FullName;
 
-  function setGreeting(string memory _greeting) public {
-    greeting = _greeting;
+
+  function setOwnerName(string memory _FullName) public {
+    FullName =_FullName;
   }
 
   function greet() view public returns (string memory) {

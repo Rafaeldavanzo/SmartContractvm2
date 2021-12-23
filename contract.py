@@ -82,7 +82,7 @@ print(greeter.functions.greet().call())
 def my_Authentication():
   print("Hello from the contract deplyed by Rafael Garcia - Student number - 10395049")
   print("Hi Paul, bellow will be the function Ive added to the Code")
-  print("I need your full name for authentication porposes")
+  print("I need your full name for authentication purpose")
   firstName = ""
   lastName = ""
   print("Please enter your first name:")

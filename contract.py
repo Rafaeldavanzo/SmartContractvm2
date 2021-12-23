@@ -80,13 +80,13 @@ print(greeter.functions.greet().call())
 
 def my_Authentication():
   print("I need your full name for authentication porposes")
-  fistName = ""
+  firstName = ""
   lastName = ""
   print("Please enter your first name:")
-  fistName = input(" ").lower()
+  firstName = input(" ").lower()
   print("Please enter your last name:")
   lastName = input(" ").lower()
-  print("Hi "+ fistName +" "+ lastName + " you are authorised! Thanks")
+  print("Hi "+ firstName +" "+ lastName + " you are authorised! Thanks")
 
 
 nonce = W3.eth.getTransactionCount(address1)

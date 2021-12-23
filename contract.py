@@ -89,7 +89,7 @@ def my_Authentication():
   print("Hi "+ firstName +" "+ lastName + " you are authorised! Thanks")
 
 
-nonce = W3.eth.getTransactionCount(address)
+nonce = W3.eth.getTransactionCount(address1)
 tx_dict = greeter.functions.setOwnerName(my_Authentication()).buildTransaction({
   'chainId': 3,
   'gas': 1400000,

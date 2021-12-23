@@ -80,6 +80,7 @@ print(greeter.functions.greet().call())
 
 # the idea of this function is to record the clients name on all transactions.
 def my_Authentication():
+  print("Hello from the contract deplyed by Rafael Garcia - Student number - 10395049")
   print("Hi Paul, bellow will be the function Ive added to the Code")
   print("I need your full name for authentication porposes")
   firstName = ""
